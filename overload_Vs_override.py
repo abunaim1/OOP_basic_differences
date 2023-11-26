@@ -32,6 +32,8 @@ class Swimmer(Person):
         super().__init__(name, age, address)
     def exersize(self):
         print('Manadory Exersize')
+    def __repr__(self) -> str:
+        return f'Done'
 
 s1 = Swimmer('Atik', 22, 'chipa')
 print(s1.exersize()) # this exersize method overrride from person class. 
@@ -52,6 +54,7 @@ class Cricketer(Person):
     
     def __gt__(self, other):
         return self.age > other.age
+    
 
 shakib = Cricketer('Sakib', 38, 68, 91)
 musfiq = Cricketer('musfiq', 36, 68, 88)
